@@ -1,0 +1,8 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # Original used a locally-built binary at tools/kraken2/kraken2, no version
+  # recorded — TODO: pin once confirmed. DB itself (standard-8gb) is external,
+  # pre-built cluster storage, not rebuilt by this pipeline.
+  - kraken2

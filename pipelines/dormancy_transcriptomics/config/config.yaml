@@ -1,0 +1,71 @@
+# Dormancy transcriptomics pipeline — Osmia bicornis / O. cornuta
+#
+samples: config/samples.tsv  # id, species, + metadata.tsv fields (see common.smk)
+
+species:
+  - bicornis
+  - cornuta
+
+# --- storage locations -------------------------------------------------------------
+raw_fastq_dir: null  # required — see module docstring above
+results_dir: "results"  # pipeline outputs; relative to the Snakemake working directory
+
+
+metadata_tsv: "resources/metadata.tsv"
+
+# --- reference genomes / annotation ---------------------------------------------------
+
+reference:
+  bicornis:
+    genome_fasta_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/907/164/935/GCF_907164935.1_iOsmBic2.1/GCF_907164935.1_iOsmBic2.1_genomic.fna.gz"
+    gtf_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/907/164/935/GCF_907164935.1_iOsmBic2.1/GCF_907164935.1_iOsmBic2.1_genomic.gtf.gz"
+    cds_fasta_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/907/164/935/GCF_907164935.1_iOsmBic2.1/GCF_907164935.1_iOsmBic2.1_cds_from_genomic.fna.gz"
+    annotation_gff_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/907/164/935/GCF_907164935.1_iOsmBic2.1/GCF_907164935.1_iOsmBic2.1_genomic.gff.gz"
+  cornuta:
+    genome_fasta_url: "https://raw.githubusercontent.com/LIB-insect-comparative-genomics/Osmia.cornuta.genome/main/7-Genome%2BAnnotation/Osmia.cornuta.genome.softmasked.fasta.gz"
+    gtf_url: "https://raw.githubusercontent.com/LIB-insect-comparative-genomics/Osmia.cornuta.genome/main/7-Genome%2BAnnotation/Osmia.cornuta.gtf.gz"
+    cds_fasta_url: "https://raw.githubusercontent.com/LIB-insect-comparative-genomics/Osmia.cornuta.genome/main/7-Genome%2BAnnotation/Osmia.cornuta.cds.fasta.gz"
+    annotation_gff_url: "https://raw.githubusercontent.com/LIB-insect-comparative-genomics/Osmia.cornuta.genome/main/7-Genome%2BAnnotation/Osmia.cornuta.gff.gz"
+
+# --- contamination screening ----------------------------------------------------------
+
+kraken:
+  db_url: "https://genome-idx.s3.amazonaws.com/kraken/k2_standard_08_GB_20260626.tar.gz"
+
+# --- species-ID verification: CO1 barcode region(s) per species ----------------------
+
+species_id:
+  co1_regions:
+    bicornis:
+      - "NW_025791190.1:18589-19884"
+      - "NW_025791190.1:57706-58935"
+    cornuta:
+      - "0047:69291-70585"
+      - "0720:21129-22423"
+
+# --- expression analysis (DESeq2 / fgsea / topGO) resources ---------------------------
+
+expression_analysis:
+  resources_dir: "resources"
+  tx2gene:
+    bicornis: "{expression_analysis[resources_dir]}/Obic_tx2gene.tsv"
+    cornuta: "{expression_analysis[resources_dir]}/Ocor_tx2gene.tsv"
+
+  dmel_flybase2ncbi: "{expression_analysis[resources_dir]}/dm_flybase2ncbi.tsv"
+  dmel_gene_summaries: "{expression_analysis[resources_dir]}/best_gene_summary_fb_2025_04.tsv.gz"
+  dme2keggpw: "{expression_analysis[resources_dir]}/dme2keggpw.tsv"
+  ncbi2dme: "{expression_analysis[resources_dir]}/ncbi2dme.tsv"
+  dm_ncbi_to_kegg: "{expression_analysis[resources_dir]}/dm-ncbi-to-kegg.tsv"
+
+  go_basic: "{expression_analysis[resources_dir]}/go-basic3.tsv"
+
+  gene2go: "{expression_analysis[resources_dir]}/osmia_bicornis_gene2go_refseq.tsv"
+  dmel_gene2go: "{expression_analysis[resources_dir]}/drosophila_melanogaster_gene2go.tsv"
+  
+  bicornis_excluded_samples:
+    - "KB45"
+    - "GB112"
+
+# --- SLURM / cluster resources (used by a Snakemake profile, not hardcoded in rules) --
+cluster:
+  account: "m2_jgu-funcpoll"

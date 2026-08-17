@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — `module load bio/BCFtools`, no version recorded.
+  - bcftools

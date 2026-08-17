@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — `module load bio/Bowtie2` + `bio/SAMtools`, no version recorded.
+  - bowtie2
+  - samtools

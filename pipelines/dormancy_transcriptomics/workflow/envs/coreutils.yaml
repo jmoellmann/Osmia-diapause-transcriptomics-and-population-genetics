@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+dependencies:
+  # For rules that only need standard POSIX text-processing tools (cat, awk, grep,
+  # sort, cut, uniq, ...) — pinned for full reproducibility rather than relying on
+  # whatever coreutils/gawk happens to be on the host.
+  - coreutils
+  - gawk
+  - grep
+  - sed

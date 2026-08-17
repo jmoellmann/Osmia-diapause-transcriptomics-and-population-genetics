@@ -1,0 +1,95 @@
+# Population genomics pipeline — Osmia bicornis / O. cornuta
+
+
+samples: config/samples.tsv  # id, species, sex, ploidy, + full field-collection metadata
+
+species:
+  - bicornis
+  - cornuta
+
+# --- storage locations -------------------------------------------------------------
+raw_fastq_dir: null  # required — see module docstring above
+results_dir: "results"  # pipeline outputs; relative to the Snakemake working directory
+
+# --- reference genomes ---------------------------------------------------------------
+# bicornis: official RefSeq assembly (GCF_907164935.1_iOsmBic2.1).
+# cornuta: Möllmann et al. 2016, see https://github.com/LIB-insect-comparative-genomics/Osmia.cornuta.genome
+reference:
+  bicornis:
+    genome_fasta_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/907/164/935/GCF_907164935.1_iOsmBic2.1/GCF_907164935.1_iOsmBic2.1_genomic.fna.gz"
+    annotation_gff_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/907/164/935/GCF_907164935.1_iOsmBic2.1/GCF_907164935.1_iOsmBic2.1_genomic.gff.gz"
+    aligner: bowtie2
+    chromosomes: "resources/genomes/bicornis/chromosomes.txt"
+    chromosome_lengths: "resources/genomes/bicornis/chromosome_lengths.txt"
+    sample2ploidy: "resources/genomes/bicornis/sample2ploidy-final.tsv"
+    haploids: "resources/genomes/bicornis/haploids.txt"
+    diploids: "resources/genomes/bicornis/diploids.txt"
+  cornuta:
+    genome_fasta_url: "https://raw.githubusercontent.com/LIB-insect-comparative-genomics/Osmia.cornuta.genome/main/7-Genome%2BAnnotation/Osmia.cornuta.genome.softmasked.fasta.gz"
+    annotation_gff_url: "https://raw.githubusercontent.com/LIB-insect-comparative-genomics/Osmia.cornuta.genome/main/7-Genome%2BAnnotation/Osmia.cornuta.gff.gz"
+    aligner: bowtie2
+    chromosomes: "resources/genomes/cornuta/chromosomes.txt"
+    chromosome_lengths: "resources/genomes/cornuta/chromosome_lengths.txt"
+    sample2ploidy: "resources/genomes/cornuta/sample2ploidy-final.tsv"
+    haploids: "resources/genomes/cornuta/haploids.txt"
+    diploids: "resources/genomes/cornuta/diploids.txt"
+
+# --- fastq prep parameters ------------------------------------------------------------
+fastq_prep:
+  adapters_fasta: "resources/adapters.fasta"
+
+# --- mpileup parameters (shared by ploidy-check and final variant calling) -------------
+mpileup:
+  min_mq: 20      # -q
+  min_bq: 20      # -Q
+  max_depth: 250  # -d
+  max_depth_per_file: 250  # -L
+
+# --- variant calling / filtering thresholds -------------------------------------------
+variant_filter:
+  min_qual: 40
+  min_mean_dp: 5
+  max_mean_dp: 20
+  max_f_missing: 0.3
+
+# --- manually-curated inputs -----------------------------------------------------------
+manual_inputs:
+  depth_check:
+    bicornis: "config/manual_inputs/bicornis-depth-check.tsv"
+    cornuta: "config/manual_inputs/cornuta-depth-check.tsv"
+
+# --- contamination screening ----------------------------------------------------------
+kraken:
+  db_url: "https://genome-idx.s3.amazonaws.com/kraken/k2_standard_08_GB_20260626.tar.gz"
+
+# --- species-ID verification: CO1 barcode region(s) per species, queried against BOLD.
+species_id:
+  co1_regions:
+    bicornis:
+      - "NW_025791190.1:18589-19884"
+      - "NW_025791190.1:57706-58935"
+    cornuta:
+      - "0047:69291-70585"
+      - "0720:21129-22423"
+
+
+orthofinder:
+  proteomes:
+    bicornis_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/907/164/935/GCF_907164935.1_iOsmBic2.1/GCF_907164935.1_iOsmBic2.1_protein.faa.gz"
+    cornuta_url: "https://raw.githubusercontent.com/LIB-insect-comparative-genomics/Osmia.cornuta.genome/main/7-Genome%2BAnnotation/Osmia.cornuta.proteins.fasta.gz"
+    bombus_terrestris_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/910/591/885/GCF_910591885.1_iyBomTerr1.2/GCF_910591885.1_iyBomTerr1.2_protein.faa.gz"
+    drosophila_melanogaster_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/215/GCF_000001215.4_Release_6_plus_ISO1_MT/GCF_000001215.4_Release_6_plus_ISO1_MT_protein.faa.gz"
+    megachile_rotundata_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/050/947/335/GCF_050947335.1_iyMegRotu1/GCF_050947335.1_iyMegRotu1_protein.faa.gz"
+    osmia_lignaria_url: "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/051/020/975/GCF_051020975.1_iyOsmLign1/GCF_051020975.1_iyOsmLign1_protein.faa.gz"
+
+
+popgen_analysis:
+
+  sequenced_samples_metadata: "resources/sequenced_samples_metadata.csv"
+  genome_length:
+    bicornis: 182000000
+    cornuta: 256000000
+
+# --- SLURM / cluster resources (used by a Snakemake profile, not hardcoded in rules) --
+cluster:
+  account: "m2_jgu-funcpoll"

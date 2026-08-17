@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — no R/package versions recorded anywhere in the original scripts.
+  - r-base
+  - r-tidyverse
+  - r-cowplot
+  - r-ggrepel

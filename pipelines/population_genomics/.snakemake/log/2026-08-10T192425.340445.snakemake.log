@@ -1,0 +1,11 @@
+Config file /home/jannik/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpfxnbv_kc/file/home/jannik/PhD/projects/diapause-popgen-combined/pipelines/population_genomics/config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+MissingInputException in rule popgen_analysis in file "/home/jannik/PhD/projects/diapause-popgen-combined/pipelines/population_genomics/workflow/rules/11_popgen_analysis.smk", line 15:
+Missing input files for rule popgen_analysis:
+    output: results/popgen_analysis/bicornis-nsl-manhattan.png, results/popgen_analysis/cornuta-nsl-manhattan.png, results/popgen_analysis/combined_nsl_manhattan.png, results/popgen_analysis/combined_nsl_vs_lfc.png, results/popgen_analysis/combined_nsl_all.png, results/popgen_analysis/figure5.png
+    wildcards: results=results
+    affected files:
+        ../diapause_transcriptomics/results/bicornis/expression_analysis/bicornis-go.RData
+        ../diapause_transcriptomics/results/cornuta/expression_analysis/cornuta-go.RData
+        ../diapause_transcriptomics/results/cornuta/expression_analysis/expression-results-cornuta.Rdata
+        ../diapause_transcriptomics/results/bicornis/expression_analysis/expression-results-bicornis.Rdata

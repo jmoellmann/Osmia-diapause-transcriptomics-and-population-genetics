@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — cluster used `module load bio/fastp` with no version recorded anywhere
+  # in the scripts or environment-modules output captured in this repo.
+  - fastp

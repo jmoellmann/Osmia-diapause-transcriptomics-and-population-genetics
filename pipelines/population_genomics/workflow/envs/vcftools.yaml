@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — `module load bio/VCFtools`, no version recorded.
+  - vcftools

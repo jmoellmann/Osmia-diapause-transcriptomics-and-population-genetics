@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # Python 3.11 confirmed (`module load lang/Python/3.11`); pixy itself and htslib
+  # (`module load bio/HTSlib`) had no version recorded — TODO: pin both.
+  - python=3.11
+  - pixy
+  - htslib

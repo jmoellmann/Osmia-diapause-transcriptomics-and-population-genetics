@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — no version recorded in the original script.
+  - orthofinder

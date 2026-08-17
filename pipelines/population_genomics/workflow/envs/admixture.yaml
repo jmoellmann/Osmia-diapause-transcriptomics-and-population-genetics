@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # Original used a locally-built binary at tools/admixture/admixture, no version
+  # recorded — TODO: pin once confirmed.
+  - admixture

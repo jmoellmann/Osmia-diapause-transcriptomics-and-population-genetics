@@ -1,0 +1,124 @@
+"""
+Population genomics pipeline — Osmia bicornis / O. cornuta.
+
+WGS reads -> per-species alignment -> BAM prep -> {ploidy check, variant calling} ->
+population-genetic statistics (pixy, ADMIXTURE, LD decay, nSL) -> contamination
+screening, species-ID verification, SNPRelate PCA, OrthoFinder orthogroups, and a
+cross-pipeline synthesis analysis.
+
+"""
+
+configfile: workflow.source_path("config/config.yaml")
+
+report: workflow.source_path("workflow/report/workflow.rst")
+
+config["samples"] = workflow.source_path(config["samples"])
+config["popgen_analysis"]["sequenced_samples_metadata"] = workflow.source_path(
+    config["popgen_analysis"]["sequenced_samples_metadata"]
+)
+config["fastq_prep"]["adapters_fasta"] = workflow.source_path(
+    config["fastq_prep"]["adapters_fasta"]
+)
+for _sp in config["reference"]:
+    for _key in ("chromosomes", "chromosome_lengths", "sample2ploidy", "haploids", "diploids"):
+        config["reference"][_sp][_key] = workflow.source_path(config["reference"][_sp][_key])
+
+
+include: "workflow/rules/common.smk"
+include: "workflow/rules/00_download_reference.smk"
+include: "workflow/rules/01_fastq_prep.smk"
+include: "workflow/rules/02_alignment.smk"
+include: "workflow/rules/03_ploidy_check.smk"
+include: "workflow/rules/04_variant_calling.smk"
+include: "workflow/rules/05_popgen_stats.smk"
+include: "workflow/rules/06_local_analysis.smk"
+include: "workflow/rules/07_contamination_and_species_id.smk"
+include: "workflow/rules/08_snprelate_pca.smk"
+include: "workflow/rules/09_nsl.smk"
+include: "workflow/rules/10_orthofinder.smk"
+include: "workflow/rules/11_popgen_analysis.smk"
+
+
+rule all:
+    input:
+        # ploidy check (per species)
+        expand(
+            "{results}/{species}/ploidy_check/depth_check.idepth",
+            results=config["results_dir"], species=config["species"],
+        ),
+        # final variant calling, subset by type
+        expand(
+            "{results}/{species}/final_calling/variants.filtered{suffix}.vcf.gz",
+            results=config["results_dir"], species=config["species"],
+            suffix=["", ".snps-only", ".indels-only"],
+        ),
+        # pixy 10kb windows and CDS windows
+        expand(
+            "{results}/{species}/pixy_10kb/10kb_pi.txt",
+            results=config["results_dir"], species=config["species"],
+        ),
+        expand(
+            "{results}/{species}/pixy_cds/cds_pi.txt",
+            results=config["results_dir"], species=config["species"],
+        ),
+        # admixture
+        expand(
+            "{results}/{species}/admixture/summary.txt",
+            results=config["results_dir"], species=config["species"],
+        ),
+        # LD decay
+        expand(
+            "{results}/{species}/lddecay/out.stat.gz",
+            results=config["results_dir"], species=config["species"],
+        ),
+        # general VCF QC stats + plots
+        expand(
+            "{results}/{species}/general_stats/het.png",
+            results=config["results_dir"], species=config["species"],
+        ),
+        # ploidy-check plots
+        expand(
+            "{results}/{species}/ploidy_check/het.png",
+            results=config["results_dir"], species=config["species"],
+        ),
+        # admixture CV plot (combined, both species)
+        expand("{results}/admixture_cv.png", results=config["results_dir"]),
+        # contamination screening — only if KRAKEN_ENABLED (common.smk); no kraken.db_url
+        # supplied means this whole branch is skipped rather than erroring.
+        expand(
+            "{results}/contamination/genus_summary.tsv", results=config["results_dir"],
+        ) if KRAKEN_ENABLED else [],
+        # species-ID verification
+        expand(
+            "{results}/species_id/summary.txt", results=config["results_dir"],
+        ),
+        # SNPRelate PCA
+        expand("{results}/snprelate/combined-pca.png", results=config["results_dir"]),
+        # nSL selection-scan statistic
+        expand(
+            "{results}/{species}/nsl/combined.nsl.norm.tsv",
+            results=config["results_dir"], species=config["species"],
+        ),
+        # OrthoFinder orthogroups (cross-pipeline input for dormancy_transcriptomics) —
+        # only if ORTHOFINDER_ENABLED (common.smk); missing proteome URLs (cornuta's,
+        # currently) skip this branch rather than erroring.
+        expand(
+            "{results}/orthofinder/N0.tsv", results=config["results_dir"],
+        ) if ORTHOFINDER_ENABLED else [],
+        # raw (pre-trim) read-count QC, both species combined
+        expand(
+            "{results}/qc/multiqc_before_trimming/multiqc_data/fastqc_sequence_counts_plot.txt",
+            results=config["results_dir"],
+        ),
+        expand(
+            "{results}/qc/multiqc_before_trimming/multiqc_report.html",
+            results=config["results_dir"],
+        ),
+        # bowtie2 mapping-rate QC, both species combined
+        expand(
+            "{results}/qc/multiqc_bowtie2_report.html",
+            results=config["results_dir"],
+        ),
+        # popgen_analysis synthesis figure (cross-pipeline: reads dormancy_transcriptomics
+        # expression-analysis output)
+        expand("{results}/popgen_analysis/figure5.png", results=config["results_dir"]),

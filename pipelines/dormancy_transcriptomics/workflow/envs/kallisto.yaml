@@ -1,0 +1,6 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — cluster used `module load bio/kallisto`, no version recorded.
+  - kallisto

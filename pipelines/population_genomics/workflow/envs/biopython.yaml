@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # `module load bio/Biopython`, no version recorded — TODO: pin.
+  - python
+  - biopython

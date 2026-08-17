@@ -1,0 +1,8 @@
+Config file /home/jannik/.cache/snakemake/snakemake/source-cache/snakemake-runtime-cache/tmpnvp45bqs/file/home/jannik/PhD/projects/diapause-popgen-combined/pipelines/diapause_transcriptomics/config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+MissingInputException in rule expression_analysis_bicornis in file "/home/jannik/PhD/projects/diapause-popgen-combined/pipelines/diapause_transcriptomics/workflow/rules/05_expression_analysis.smk", line 30:
+Missing input files for rule expression_analysis_bicornis:
+    output: results/bicornis/expression_analysis/bicornis-go.RData, results/bicornis/expression_analysis/combined-pca-bicornis.png, results/bicornis/expression_analysis/combined-gsea-plus6.pdf, results/bicornis/expression_analysis/heatmap_combined.png, results/bicornis/expression_analysis/expression-results-bicornis.Rdata, results/bicornis/expression_analysis/output_tables/res_t1.tsv, results/bicornis/expression_analysis/output_tables/res_t2.tsv, results/bicornis/expression_analysis/output_tables/res_t3.tsv, results/bicornis/expression_analysis/output_tables/res_sexes.tsv, results/bicornis/expression_analysis/output_tables/res_sexes_interaction.tsv, results/bicornis/expression_analysis/output_tables/bicornis-degs.xlsx
+    wildcards: results=results
+    affected files:
+        ../population_genomics/results/orthofinder/N0.tsv

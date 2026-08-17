@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # multiqc_kallisto rule has no original script (see 02_alignment.smk docstring) —
+  # no version to carry forward, using a recent multiqc.
+  - multiqc

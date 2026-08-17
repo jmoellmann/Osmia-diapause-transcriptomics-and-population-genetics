@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # multiqc_raw has no original script (the multiqc aggregation step was never
+  # captured, only its historical output) — no version to carry forward.
+  - multiqc

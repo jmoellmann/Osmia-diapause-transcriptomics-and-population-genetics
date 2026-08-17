@@ -1,0 +1,61 @@
+"""
+Dormancy transcriptomics pipeline — Osmia bicornis / O. cornuta.
+
+RNA-seq (temperature x time-point dormancy experiment) -> per-species alignment
+(STAR) + quantification (kallisto) -> {contamination screening, species-ID
+verification, differential expression / GSEA}.
+
+"""
+
+import os
+
+configfile: workflow.source_path("config/config.yaml")
+
+report: workflow.source_path("workflow/report/workflow.rst")
+
+config["samples"] = workflow.source_path(config["samples"])
+config["metadata_tsv"] = workflow.source_path(config["metadata_tsv"])
+config["expression_analysis"]["resources_dir"] = os.path.normpath(
+    os.path.join(workflow.current_basedir, config["expression_analysis"]["resources_dir"])
+)
+
+
+include: "workflow/rules/common.smk"
+include: "workflow/rules/00_download_reference.smk"
+include: "workflow/rules/01_fastq_prep.smk"
+include: "workflow/rules/02_alignment.smk"
+include: "workflow/rules/03_contamination.smk"
+include: "workflow/rules/04_species_id.smk"
+include: "workflow/rules/05_expression_analysis.smk"
+
+
+rule all:
+    input:
+        # per-sample Kraken2 contamination reports (no aggregation script exists in
+        # the original for this pipeline — see 03_contamination.smk). Only if
+        # KRAKEN_ENABLED (common.smk); no kraken.db_url supplied skips this branch.
+        [
+            f"{config['results_dir']}/{sp}/contamination/kraken2/{s}.kraken.report.out"
+            for sp in config["species"] for s in samples_of(sp)
+        ] if KRAKEN_ENABLED else [],
+        # species-ID verification
+        expand("{results}/species_id/summary.txt", results=config["results_dir"]),
+        # expression analysis, per species
+        expand(
+            "{results}/bicornis/expression_analysis/output_tables/bicornis-degs.xlsx",
+            results=config["results_dir"],
+        ),
+        expand(
+            "{results}/cornuta/expression_analysis/output_tables/cornuta-degs.xlsx",
+            results=config["results_dir"],
+        ),
+        # kallisto pseudoalignment-rate MultiQC report, per species
+        expand(
+            "{results}/{species}/qc/multiqc_report.html",
+            results=config["results_dir"], species=config["species"],
+        ),
+        # raw (pre-trim) read QC, both species combined
+        expand(
+            "{results}/qc/multiqc_before_trimming/multiqc_report.html",
+            results=config["results_dir"],
+        ),

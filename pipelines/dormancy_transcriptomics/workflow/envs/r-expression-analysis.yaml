@@ -1,0 +1,23 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — no versions recorded anywhere in the original scripts.
+  - r-base
+  - r-tidyverse
+  - bioconductor-tximport
+  - bioconductor-deseq2
+  - bioconductor-topgo
+  - r-fgsea
+  - bioconductor-complexheatmap
+  - bioconductor-clusterprofiler
+  - bioconductor-limma
+  - r-rcolorbrewer
+  - r-patchwork
+  - r-cowplot
+  - r-pheatmap
+  - r-ggplotify
+  - r-ggrepel
+  - r-ggtext
+  - r-viridis
+  - r-writexl

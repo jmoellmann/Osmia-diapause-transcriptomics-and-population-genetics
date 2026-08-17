@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — original used a locally-built git clone of selscan under
+  # local/pop-genomics/nsl/selscan (vendored source, no version tag recorded).
+  - selscan

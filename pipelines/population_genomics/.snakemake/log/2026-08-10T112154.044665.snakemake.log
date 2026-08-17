@@ -1,0 +1,8 @@
+Lints for rule nsl_chrom_rename_map (line 38, /home/jannik/PhD/projects/diapause-popgen-combined/pipelines/population_genomics/workflow/rules/09_nsl.smk):
+    * Specify a conda environment or container for each rule.:
+      This way, the used software for each specific step is documented, and the
+      workflow can be executed on any machine without prerequisites.
+      Also see:
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#integrated-package-management
+      https://snakemake.readthedocs.io/en/latest/snakefiles/deployment.html#running-jobs-in-containers
+

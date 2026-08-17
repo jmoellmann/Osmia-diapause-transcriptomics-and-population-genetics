@@ -1,0 +1,100 @@
+id	metadata_id	site_id	location	type	species	sex	date	time	latitude	longitude	elevation	habitat	avg_temp	bee_hotel	life_stage	medium	parasitized	note	old_id	commercial	ploidy
+EMS1_02	EMS1-02	EMS1	Emsland	bee	A. flavipes	male	10/04/23	noon (11am-3pm)	52.35986	7.30145	41	agricultural landscape	9	YES	adult	ethanol	NO	excised from cocoon, alive, originally thought to be bicornis	NA	FALSE	1
+SE1_01	SE1-01	SE1	Sennfeld	bee	bicolor	female	27/04/22	noon (11am-3pm)	50.04889	10.2767	224	agricultural landscape	8.9	NO	adult	dry frozen	NO	small and weird, originally thought to be cornuta	NA	FALSE	2
+AB1_02	AB1-02	AB1	Aschaffenburg	bee	bicornis	male	27/04/22	afternoon (3-7pm)	49.97455	9.16201	153	suburban landscape	9.8	YES	adult	dry frozen	NO	small and weird	NA	FALSE	1
+AU1_01	AU1-01	AU1	Aurach	bee	bicornis	male	24/04/22	afternoon (3-7pm)	49.23174	10.49811	418	suburban landscape	8.2	YES	adult	ethanol + frozen	NA	excised from cocoon, alive	NA	FALSE	1
+BA1_01	BA1-01	BA1	Bamberg	bee	bicornis	male	27/04/22	noon (11am-3pm)	49.88106	10.90341	244	botanical garden	8.5	YES	adult	dry frozen	NO	massive size	NA	FALSE	1
+BE1_03	BE1-03	BE1	Berlin	bee	bicornis	male	04/05/22	night (7-6am)	52.28089	12.89	74	village, forest	9.1	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	1
+BE2_01	BE2-01	BE2	Berlin	bee	bicornis	female	05/05/22	noon (11am-3pm)	52.19622	13.5905	57	forest	9.2	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	2
+BERL3_02	BERL3-02	BERL3	Berlin	bee	bicornis	male	12/04/23	morning (6am – 11am)	52.60409	13.396366	49	botanical garden	9	YES	adult	ethanol	NO	tiny individual	NA	FALSE	1
+BI1_01	BI1-01	BI1	Biberach	bee	bicornis	male	21/04/22	night (7-6am)	48.10067	9.79987	534	suburban landscape	8.2	YES	adult	ethanol + frozen	NO	NA	NA	FALSE	1
+BLF1_03	BLF1-03	BLF1	Bielefeld	bee	bicornis	male	27/03/23	afternoon (3-7pm)	52.014974	8.51177	148	botanical garden	8.7	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	1
+BRAS1_01	BRAS1-01	BRAS1	Braunschweig	bee	bicornis	male	29/03/23	afternoon (3-7pm)	52.31305	10.52331	69	garden	8.8	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	1
+BREM1_02	BREM1-02	BREM1	Bremen	bee	bicornis	male	10/04/23	afternoon (3-7pm)	53.0692	8.79728	8	urban	8.8	YES	adult	ethanol	NO	seems longer than usual	NA	FALSE	1
+BS1_02	BS1-02	BS1	Bad Schwalbach	bee	bicornis	male	02/05/22	morning (6am – 11am)	50.13953	8.06327	359	suburban park	8.2	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	1
+BT1_02	BT1-02	BT1	Bayreuth	bee	bicornis	male	07/05/22	afternoon (3-7pm)	49.92218	11.58667	355	botanical garden	8.3	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	1
+CH1_01	CH1-01	CH1	Chemnitz	bee	bicornis	female	07/05/22	noon (11am-3pm)	50.81883	12.9083	320	suburban park	7.7	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	2
+CLOP1_01	CLOP1-01	CLOP1	Cloppenburg	bee	bicornis	male	28/03/23	afternoon (3-7pm)	52.84053	8.02565	43	garden	8.6	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	1
+CLOP4_01	CLOP4-01	CLOP4	Cloppenburg	bee	bicornis	male	10/04/23	afternoon (3-7pm)	53.12118	7.81249	4	NA	8.8	YES	adult	ethanol	YES	Individuals from this location are massive	NA	FALSE	1
+DA1_02	DA1-02	DA1	Griesheim	bee	bicornis	male	27/04/22	afternoon (3-7pm)	49.85923	8.54809	92	suburban landscape	9.9	NO	adult	dry frozen	NO	NA	NA	FALSE	1
+DD1_01	DD1-01	DD1	Dresden	bee	bicornis	female	05/05/22	afternoon (3-7pm)	51.17176	14.13374	347	village, forest	7.6	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	2
+DD3_01	DD3-01	DD3	Dresden	bee	bicornis	male	05/05/22	afternoon (3-7pm)	50.87557	13.67617	387	village	7.2	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	1
+DORM2_02	DORM2-02	DORM2	Dortmund	bee	bicornis	female	07/04/23	afternoon (3-7pm)	51.52317	7.505913	79	garden	9.5	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	2
+FB1_02	FB1-02	FB1	Freiburg	bee	bicornis	male	NA	NA	47.99499	7.834573	267	NA	10.5	NA	adult	ethanol	NA	NA	NA	FALSE	1
+GT1_01	GT1-01	GT1	Göttingen	bee	bicornis	male	03/05/22	afternoon (3-7pm)	51.52352	9.89091	170	suburban landscape	8.4	NO	adult	ethanol + frozen	NA	NA	NA	FALSE	1
+GW1_05	GW1-05	GW1	Greifswald	bee	bicornis	male	NA	NA	54.0797158	13.2371543	13	NA	8.2	NA	adult	dry frozen	NA	excised from cocoon, alive	NA	TRUE	1
+HAL1_01	HAL1-01	HAL1	Halle	bee	bicornis	male	30/03/23	noon (11am-3pm)	51.29083	11.92742	96	village	9.1	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	1
+HAMB1_02	HAMB1-02	HAMB1	Hamburg	bee	bicornis	male	11/04/23	morning (6am – 11am)	53.48618	9.9978	1	urban	8.6	YES	adult	ethanol	NO	NA	NA	FALSE	1
+HB1_04	HB1-04	HB1	Heilbronn	bee	bicornis	male	23/04/22	afternoon (3-7pm)	49.15119	9.23544	223	botanical garden	10	NO	adult	ethanol + frozen	NA	NA	NA	FALSE	1
+HE1_03	HE1-03	HE1	Hersbruck	bee	bicornis	female	26/04/22	afternoon (3-7pm)	49.51349	11.4548	357	agricultural landscape	8.6	YES	adult	dry frozen	NO	excised from cocoon, alive	NA	FALSE	2
+JNA1_01	JNA1-01	JNA1	Altendorf bei Jena	bee	bicornis	male	23/03/23	morning (6am – 11am)	50.844	11.57983	242	semi-natural landscape	8.3	YES	adult	ethanol	NO	NA	NA	FALSE	1
+JNA2_04	JNA2-04	JNA2	Jena	bee	bicornis	female	23/03/23	noon (11am-3pm)	50.93198	11.58544	153	botanical garden	8.7	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	2
+KL1_01	KL1-01	KL1	Kiel-Flintbek	bee	bicornis	male	14/04/23	NA	54.2470277777778	10.0523583333333	NA	NA	NA	NA	adult	ethanol	NO	NA	NA	FALSE	1
+KLN1_05	KLN1-05	KLN1	Köln	bee	bicornis	female	26/03/23	noon (11am-3pm)	50.88826	6.98405	50	garden	10.1	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	2
+KZ1_02	KZ1-02	KZ1	Konstanz	bee	bicornis	male	NA	NA	47.7084536	9.0816667	408	NA	9.6	NA	adult	dry frozen	NA	excised from cocoon, alive	NA	TRUE	1
+LAN1_02	LAN1-02	LAN1	Landsberg a.d. Lech	bee	bicornis	male	20/03/23	noon (11am-3pm)	47.98092	10.86199	625	semi-natural landscape	7.9	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	1
+LÜB1_02	LÜB1-02	LÜB1	Lübeck	bee	bicornis	female	11/04/23	noon (11am-3pm)	53.8603	10.68556	10	urban	8.6	YES	adult	ethanol	NO	NA	NA	FALSE	2
+MA1_01	MA1-01	MA1	Magdeburg	bee	bicornis	male	04/05/22	afternoon (3-7pm)	52.14001	11.64337	54	city	9	YES	adult	ethanol + frozen	NA	white haired, old?	NA	FALSE	1
+MGLB1_05	MGLB1-05	MGLB1	Mönchen-Gladbach	bee	bicornis	female	26/03/23	afternoon (3-7pm)	51.21692	6.52821	37	agricultural landscape	10.2	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	2
+MN1_01	MN1-01	MN1	Freising	bee	bicornis	male	15/04/22	afternoon (3-7pm)	48.548675	11.716404	468	suburban vegetation	7.8	NO	adult	ethanol + frozen	NO	NA	NA	FALSE	1
+MN2_01	MN2-01	MN2	München	bee	bicornis	male	16/04/22	noon (11am-3pm)	47.97613	11.64045	619	agricultural landscape	7.7	YES	adult	ethanol + frozen	NO	NA	NA	FALSE	1
+MR1_01	MR1-01	MR1	Marburg	bee	bicornis	male	02/05/22	afternoon (3-7pm)	50.80099	8.80765	330	botanical garden	8.3	YES	adult	ethanol + frozen	YES	NA	NA	FALSE	1
+NB1_01	NB1-01	NB1	Nürnberg	bee	bicornis	male	12/04/22	noon (11am-3pm)	49.480846	11.085409	317	suburban park	8.9	YES	adult	ethanol + frozen	NO	NA	NA	FALSE	1
+NBRB1_01	NBRB1-01	NBRB1	Neubrandenburg	bee	bicornis	female	11/04/23	afternoon (3-7pm)	53.5361	13.39497	63	park	8.1	YES	adult	ethanol	NO	NA	NA	FALSE	2
+OSNA1_01	OSNA1-01	OSNA1	Osnabrück	bee	bicornis	male	28/03/23	noon (11am-3pm)	52.28243	8.02117	85	suburban landscape	9	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	1
+SAT1_04	SAT1-04	SAT1	Schärding (AT)	bee	bicornis	male	NA	NA	48.4589254	13.4361607	306	NA	8.9	NA	adult	dry frozen	NA	excised from cocoon, alive	NA	TRUE	1
+SHZ1_01	SHZ1-01	SHZ1	Südharz	bee	bicornis	male	NA	NA	51.528822	10.95245	246	NA	8.2	NA	adult	dry frozen	NA	excised from cocoon, alive	NA	FALSE	1
+SIEG1_01	SIEG1-01	SIEG1	Siegen	bee	bicornis	male	07/04/23	afternoon (3-7pm)	50.884798	8.017205	287	suburban landscape	8.5	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	1
+SLTN1_05	SLTN1-05	SLTN1	Schlüchtern	bee	bicornis	male	24/03/23	morning (6am – 11am)	50.3457347	9.5275445	208	suburban park	9	YES	adult	frozen (-80)	NO	excised from cocoon, alive	NA	FALSE	1
+ST3_01	ST3-01	ST3	Stuttgart	bee	bicornis	male	23/04/22	noon (11am-3pm)	48.80628	9.1765	306	suburban landscape	9.3	YES	adult	ethanol + frozen	NO	NA	NA	FALSE	1
+SYL1_01	SYL1-01	SYL1	Sylt	bee	bicornis	female	06/06/23	NA	55.0236111	8.435277	NA	NA	NA	NA	adult	ethanol	NO	looks a bit weird for bicornis	NA	FALSE	2
+ULMN1_01	ULMN1-01	ULMN1	Ulmen	bee	bicornis	male	26/03/23	morning (6am – 11am)	50.23115	7.1406	424	village	8	YES	adult	ethanol	NO	excised from cocoon, alive	NA	FALSE	1
+WDW1_01	WDW1-01	WDW1	Wandelwitz	bee	bicornis	female	19/05/23	NA	54.339548	10.871825	NA	NA	NA	NA	adult	ethanol	NO	NA	NA	FALSE	2
+WITT1_01	WITT1-01	WITT1	Wittenberg	bee	bicornis	male	12/04/23	afternoon (3-7pm)	51.870827	12.645573	74	park	9.1	YES	adult	ethanol	NO	NA	NA	FALSE	1
+WU1_02	WU1-02	WU1	Würzburg	bee	bicornis	male	27/04/22	afternoon (3-7pm)	49.76572	9.9325	233	botanical garden	9.4	YES	adult	dry frozen	NO	NA	NA	FALSE	1
+XNB_68	XNB-68	NP1	Nordpfalz	bee	bicornis	male	NA	NA	49.6650537	7.78546522	NA	NA	NA	NA	NA	NA	NA	NA	NA	TRUE	1
+HS1_01	HS1-01	HS1	Halberstadt	bee	brevicornis	male	04/05/22	noon (11am-3pm)	51.86756	10.87347	172	agricultural landscape	8.6	YES	adult	ethanol + frozen	NA	originally thought to be bicornis	NA	FALSE	1
+ABW1_01	ABW1-01	AB1	Albersweiler	bee	cornuta	male	NA	NA	49.218259	8.032112	195	NA	9.7	NA	adult	ethanol	NA	NA	NA	FALSE	1
+AG1_01	AG1-01	AG1	Füssen	bee	cornuta	male	20/04/22	afternoon (3-7pm)	47.57469	10.70088	795	suburban landscape	7.2	NO	adult	ethanol + frozen	NO	NA	NA	FALSE	1
+AUG1_01	AUG1-01	AUG1	Augsburg	bee	cornuta	male	20/03/23	afternoon (3-7pm)	48.351617	10.9136	483	botanical garden	8.4	YES	adult	ethanol	NO	NA	NA	FALSE	1
+BERL3_01	BERL3-01	BERL3	Berlin	bee	cornuta	female	12/04/23	morning (6am – 11am)	52.60409	13.396366	49	botanical garden	9	YES	adult	ethanol	NO	NA	NA	FALSE	2
+BLF1_01	BLF1-01	BLF1	Bielefeld	bee	cornuta	male	27/03/23	afternoon (3-7pm)	52.014974	8.51177	148	botanical garden	8.7	YES	adult	ethanol	NO	NA	NA	FALSE	1
+BORB1_01	BORB1-01	BORB1	Bad Orb	bee	cornuta	male	24/03/23	noon (11am-3pm)	50.23096	9.32325	253	semi-natural orchard	9	YES	adult	frozen (-80)	NO	NA	NA	FALSE	1
+BRAS1_04	BRAS1-04	BRAS1	Braunschweig	bee	cornuta	female	29/03/23	afternoon (3-7pm)	52.31305	10.52331	69	garden	8.8	YES	adult	ethanol	NO	NA	NA	FALSE	2
+BREM1_01	BREM1-01	BREM1	Bremen	bee	cornuta	female	10/04/23	afternoon (3-7pm)	53.0692	8.79728	8	urban	8.8	YES	adult	ethanol	NO	NA	NA	FALSE	2
+CH1_02	CH1-02	CH1	Chemnitz	bee	cornuta	female	07/05/22	noon (11am-3pm)	50.81883	12.9083	320	suburban park	7.7	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	2
+DD2_01	DD2-01	DD2	Dresden	bee	cornuta	female	05/05/22	afternoon (3-7pm)	51.04228	13.75749	115	botanical garden	9	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	2
+DD3_03	DD3-03	DD3	Dresden	bee	cornuta	female	05/05/22	afternoon (3-7pm)	50.87557	13.67617	387	village	7.2	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	2
+DON1_01	DON1-01	DON1	Donauwörth	bee	cornuta	male	20/03/23	afternoon (3-7pm)	48.721	10.778413	413	suburban park	8.5	YES	adult	ethanol	YES	NA	NA	FALSE	1
+DORM1_01	DORM1-01	DORM1	Dortmund	bee	cornuta	male	26/03/23	night (7-6am)	51.49066	7.31953	118	garden	9.4	YES	adult	ethanol	NO	NA	NA	FALSE	1
+EF1_01	EF1-01	EF1	Erfurt	bee	cornuta	male	23/03/23	afternoon (3-7pm)	50.96795	11.00444	232	botanical garden	8.2	YES	adult	ethanol	NO	NA	NA	FALSE	1
+EMS1_01	EMS1-01	EMS1	Emsland	bee	cornuta	female	10/04/23	noon (11am-3pm)	52.35986	7.30145	41	agricultural landscape	9	YES	adult	ethanol	NO	NA	NA	FALSE	2
+FB1_01	FB1-01	FB1	Freiburg	bee	cornuta	male	NA	NA	47.99499	7.834573	267	NA	10.5	NA	adult	ethanol	NA	NA	NA	FALSE	1
+FULD1_01	FULD1-01	FULD1	Fulda	bee	cornuta	male	24/03/23	morning (6am – 11am)	50.530858	9.6534021	286	garden club	8.3	YES	adult	frozen (-80)	NO	NA	NA	FALSE	1
+GÖ1_04	GÖ1-04	GÖ1	Göppingen	bee	cornuta	female	23/04/22	afternoon (3-7pm)	48.629499	9.589539	338	suburban landscape	9	YES	adult	dry frozen	NO	kept in lab as larva, excised from cocoon, collected on Sep 13 2022	NA	FALSE	2
+GW1_01	GW1-01	GW1	Greifswald	bee	cornuta	male	NA	NA	54.0797158	13.2371543	13	NA	8.2	NA	adult	dry frozen	NA	excised from cocoon, alive	NA	TRUE	1
+HAMB1_01	HAMB1-01	HAMB1	Hamburg	bee	cornuta	male	11/04/23	morning (6am – 11am)	53.48618	9.9978	1	urban	8.6	YES	adult	ethanol	NO	NA	NA	FALSE	1
+HE1_10	HE1-10	HE1	Hersbruck	bee	cornuta	male	26/04/22	afternoon (3-7pm)	49.51349	11.4548	357	agricultural landscape	8.6	YES	adult	dry frozen	NO	kept in lab as larva, excised from cocoon, collected on Sep 13 2022	NA	FALSE	1
+JV1_01	JV1-01	JV1	Jever	bee	cornuta	male	23/04/23	NA	53.564322	7.909109	NA	NA	NA	NA	adult	ethanol	NO	Relatively big	NA	FALSE	1
+KLN1_01	KLN1-01	KLN1	Köln	bee	cornuta	male	26/03/23	noon (11am-3pm)	50.88826	6.98405	50	garden	10.1	YES	adult	ethanol	NO	NA	NA	FALSE	2
+KZ1_11	KZ1-11	KZ1	Konstanz	bee	cornuta	male	NA	NA	47.7084536	9.0816667	408	NA	9.6	NA	adult	dry frozen	NA	excised from cocoon, alive	NA	TRUE	1
+LI1_03	LI1-03	LI1	Limburg an der Lahn	bee	cornuta	female	02/05/22	noon (11am-3pm)	50.38583	8.04641	129	suburban park	9.5	YES	adult	ethanol + frozen	NA	NA	NA	FALSE	2
+LÜB1_01	LÜB1-01	LÜB1	Lübeck	bee	cornuta	female	11/04/23	noon (11am-3pm)	53.8603	10.68556	10	urban	8.6	YES	adult	ethanol	NO	NA	NA	FALSE	2
+MGLB1_03	MGLB1-03	MGLB1	Mönchen-Gladbach	bee	cornuta	male	26/03/23	afternoon (3-7pm)	51.21692	6.52821	37	agricultural landscape	10.2	YES	adult	ethanol	NO	NA	NA	FALSE	1
+MRNG1_01	MRNG1-01	MRNG1	Mehring	bee	cornuta	male	25/03/23	afternoon (3-7pm)	49.8026401	6.8325761	253	garden in nature	9.1	YES	adult	ethanol	NO	NA	NA	FALSE	1
+MUNH1_01	MUNH1-01	MUNH1	Münster (Hessen)	bee	cornuta	male	24/03/23	noon (11am-3pm)	49.92871	8.8971	133	semi-natural landscape	9.9	YES	adult	frozen (-80)	NO	NA	NA	FALSE	2
+MZ1_02	MZ1-02	MZ1	Mainz	bee	cornuta	male	23/03/22	afternoon (3-7pm)	49.968437	8.198039	184	fruit tree orchard	9.2	NO	adult	dry frozen	NA	NA	MZ-2	FALSE	1
+NB2_01	NB2-01	NB2	Erlangen	bee	cornuta	male	12/04/22	afternoon (3-7pm)	49.602794	11.014809	286	suburban park	8.9	YES	adult	ethanol + frozen	NO	NA	NA	FALSE	1
+NBRB1_05	NBRB1-05	NBRB1	Neubrandenburg	bee	cornuta	male	11/04/23	afternoon (3-7pm)	53.5361	13.39497	63	park	8.1	YES	adult	ethanol	NO	NA	NA	FALSE	1
+NM4_01	NM4-01	NM4	Neumünster-Einfeld	bee	cornuta	male	02/04/23	NA	54.1195389	9.9942638	NA	NA	NA	NA	adult	ethanol	NO	NA	NA	FALSE	1
+NP1_05	NP1-05	NP1	Nordpfalz	bee	cornuta	male	NA	NA	49.6650537	7.78546522	431	NA	7.7	NA	adult	dry frozen	NA	excised from cocoon, alive	NA	TRUE	1
+PDBN1_01	PDBN1-01	PDBN1	Paderborn	bee	cornuta	male	27/03/23	noon (11am-3pm)	51.702036	8.754778	165	semi-natural garden	8.8	YES	adult	ethanol	NO	NA	NA	FALSE	1
+RB1_03	RB1-03	RB1	Regensburg	bee	cornuta	male	14/04/22	noon (11am-3pm)	48.992996	12.091662	392	botanical garden	8.2	YES	adult	ethanol + frozen	YES	NA	NA	FALSE	1
+RBN1_21	RBN1-21	RBN1	Rottenburg	bee	cornuta	male	NA	NA	48.4696306	8.5982206	676	NA	8	NA	adult	dry frozen	NA	excised from cocoon, alive	NA	FALSE	1
+ROST1_01	ROST1-01	ROST1	Rostock	bee	cornuta	female	11/04/23	afternoon (3-7pm)	54.09032	12.09067	26	botanical garden	8.4	YES	adult	ethanol	NO	NA	NA	FALSE	2
+SAT1_08	SAT1-08	SAT1	Schärding (AT)	bee	cornuta	male	NA	NA	48.4589254	13.4361607	306	NA	8.9	NA	adult	dry frozen	NA	excised from cocoon, alive	NA	TRUE	1
+SI1_01	SI1-01	SI1	Sinsheim	bee	cornuta	female	23/04/22	afternoon (3-7pm)	49.22317	8.79386	197	semi-natural landscape	10.2	NO	adult	ethanol + frozen	NA	NA	NA	FALSE	2
+SLND1_01	SLND1-01	SLND1	Saarland	bee	cornuta	male	25/03/23	noon (11am-3pm)	49.2807922	7.2286737	254	village	9.1	YES	adult	ethanol	NO	NA	NA	FALSE	1
+ST1_01	ST1-01	ST1	Stuttgart	bee	cornuta	female	22/04/22	noon (11am-3pm)	48.724593	9.141158	419	suburban landscape	8.8	NO	adult	ethanol + frozen	NO	NA	NA	FALSE	2
+WU1_05	WU1-05	WU1	Würzburg	bee	cornuta	female	27/04/22	afternoon (3-7pm)	49.76572	9.9325	233	botanical garden	9.4	YES	adult	dry frozen	NO	kept in lab as larva, excised from cocoon, collected on Sep 13 2022	NA	FALSE	2
+XSC_26	XSC-26	SHZ1	Südharz	bee	cornuta	male	NA	NA	51.528822	10.95245	NA	NA	NA	NA	NA	NA	NA	NA	NA	TRUE	1

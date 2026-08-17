@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # TODO: pin — no versions recorded anywhere in the original scripts.
+  - r-base
+  - bioconductor-snprelate
+  - r-dplyr
+  - r-stringr
+  - r-ggplot2
+  - r-ggrepel
+  - r-cowplot

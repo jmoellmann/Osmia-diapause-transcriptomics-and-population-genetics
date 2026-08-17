@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # Original used a locally-built binary at tools/plink/plink with no version recorded
+  # anywhere in the tree. Using bioconda's plink (1.9x line, matching the CLI flags
+  # used in the wrapped rule) instead of the cluster-local binary — TODO: pin exact
+  # version once you can confirm which plink version was actually used.
+  - plink
