@@ -8,12 +8,6 @@ library(cowplot)
 # Nucleotide-diversity and nSL Manhattan plots, nSL-vs-differential-expression
 # regressions, and a GO-enrichment synthesis figure combining nSL selection signal
 # with dormancy-experiment expression results.
-#
-# KNOWN ISSUE: `bicornis_10kb_theta`'s chromosome-name parsing uses the cornuta
-# contig-naming pattern instead of bicornis's own, so its per-chromosome `chromosome`
-# column silently becomes NA (`factor(levels = 1:16)` can't match). Harmless for what
-# this script actually does with theta (a genome-wide median, independent of
-# chromosome), but would break any future per-chromosome use of it.
 
 metadata_path <- snakemake@input[["sequenced_samples_metadata"]]
 read_counts_path <- snakemake@input[["raw_read_counts"]]
@@ -39,47 +33,6 @@ combined_nsl_manhattan_out <- snakemake@output[["combined_nsl_manhattan_png"]]
 combined_nsl_vs_lfc_out <- snakemake@output[["combined_nsl_vs_lfc_png"]]
 combined_nsl_all_out <- snakemake@output[["combined_nsl_all_png"]]
 figure5_out <- snakemake@output[["figure5_png"]]
-
-#library(orthologr)
-
-# bicornis_cornuta_dnds <- dNdS(query_file = "data/cornuta/cds.gffread.fa", subject_file = "data/bicornis/cds.fa",
-#      ortho_detection = "RBH", 
-#      aligner_path = "/home/jannik/PhD/projects/pop-genomics/other",
-#      aa_aln_type     = "pairwise",
-#      aa_aln_tool     = "NW", 
-#      codon_aln_tool  = "pal2nal", 
-#      dnds_est.method = "Comeron", 
-#      comp_cores      = 6
-#      )
-# 
-# readr::write_tsv(bicornis_cornuta_dnds, "dnds-estimation/bicornis-cornuta.tsv")
-# 
-# bicornis_cornuta_dnds <- read_tsv("dnds-estimation/bicornis-cornuta.tsv")
-# bicornis_cornuta_dnds <- bicornis_cornuta_dnds %>% 
-#   mutate(subject_id = unlist(lapply(str_split(subject_id, "_"), 
-#                                     function(x) str_flatten(x[4:5], "_"))))
-# 
-# #load(go_cornuta_path)
-# #load(go_bicornis_path)
-# #load(expression_results_bicornis_path)
-# 
-# cornuta_dnds <- bicornis_cornuta_dnds %>% 
-#   dplyr::mutate(geneID = str_split_i(query_id, pattern = "\\.", i = 1)) %>% 
-#   group_by(geneID) %>% dplyr::summarise(dNdS = mean(dNdS, na.rm = TRUE)) 
-# cornuta_dnds_vector <- cornuta_dnds %>% 
-#   drop_na() %>% pull(dNdS, geneID)
-# 
-# cornuta_combined_t2 <- res_t2 %>% dplyr::left_join(cornuta_dnds, by = c("geneID")) %>%  
-#   dplyr::mutate(FoldChange.y = 2**log2FoldChange.y) %>% 
-#   dplyr::select(geneID, padj, log2FoldChange.x, log2FoldChange.y, FoldChange.y, dNdS)
-# 
-# mod <- lm(data = cornuta_combined_t2, formula = dNdS ~ FoldChange.y)
-# 
-# summary(mod)
-# 
-# bpGO <- fgsea(stats = cornuta_dnds, pathways = gene2bpGO, minSize = 10, maxSize = 20000, 
-#               gseaParam = 0)
-
 
 # Read count summary ------------------------------------------------------
 metadata <- read_csv(metadata_path) %>% 
